@@ -1,0 +1,36 @@
+{
+  "name":           "legokichi.webmodule.jszip.js",
+  "version":        "0.0.0",
+  "description":    "JSZip wapper for WebModule.",
+  "url":            "https://github.com/legokichi/WebModule.JSZip.js",
+  "keywords":       ["legokichi", "WebModule", "Unstable"],
+  "repository": {
+    "type":         "git",
+    "url":          "https://github.com/legokichi/WebModule.JSZip.js.git"
+  },
+  "scripts": {
+    "build":        "cat lib/WebModule.JSZip.js.before.txt vender/jszip/dist/jszip.js lib/WebModule.JSZip.js.after.txt > lib/WebModule.JSZip.js; cat lib/WebModule.JSZip.js.before.txt vender/jszip/dist/jszip.min.js lib/WebModule.JSZip.js.after.txt  > release/WebModule.JSZip.min.js",
+    "build-simple": "npm run build",
+    "build-release":"npm run build"
+  },
+
+  "x-build": {
+    "source":       ["lib/WebModule.JSZip.js"],
+    "output":       "release/WebModule.JSZip.min.js",
+    "target":       ["all"],
+    "label":        ["@dev"],
+    "module": {
+      "develop":    [],
+      "release":    []
+    }
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "lib":            "./lib/",
+  "main":           "./index.js",
+  "author":         "legokichi <legokichi@gmail.com>",
+  "license":        "MIT",
+  "contributors":   []
+}

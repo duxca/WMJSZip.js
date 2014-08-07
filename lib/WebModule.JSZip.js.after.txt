@@ -1,0 +1,14 @@
+return module.exports;
+})({}, {});
+
+// --- exports ---------------------------------------------
+var namespace = "WebModule";
+global[namespace] || (global[namespace] = {});
+global[namespace]["JSZip"] = JSZip;
+
+if ("process" in global) {
+    module["exports"] = JSZip;
+}
+global["JSZip" in global ? "JSZip_" : "JSZip"] = JSZip; // switch module.
+
+})((this || 0).self || global); // WebModule idiom. http://git.io/WebModule
