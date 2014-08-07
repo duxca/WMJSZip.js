@@ -7,7 +7,8 @@ global[namespace] || (global[namespace] = {});
 global[namespace]["JSZip"] = JSZip;
 
 if ("process" in global) {
-    module["exports"] = JSZip;
+    module["exports"][namespace] || (module["exports"][namespace] = {});
+    module["exports"][namespace]["JSZip"] = JSZip;
 }
 global["JSZip" in global ? "JSZip_" : "JSZip"] = JSZip; // switch module.
 

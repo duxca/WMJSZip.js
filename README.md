@@ -2,7 +2,7 @@
 
 [![npm](https://nodei.co/npm/legokichi.webmodule.jszip.js.png?downloads=true&stars=true)](https://nodei.co/npm/legokichi.webmodule.jszip.js/)
 
-JSZip wrapper for WebModule.
+[JSZip](http://stuk.github.io/jszip/) wrapper for WebModule.
 
 ## Document
 
