@@ -7,7 +7,7 @@ if ("process" in global) {
 }
 
 var namespace = "WebModule";
-global[namespace] || (global[namespace] = {});
+global[namespace] = global[namespace] || {};
 global[namespace]["JSZip" in global ? "JSZip_" : "JSZip"] = JSZip;　// switch module.
 
 })((this || 0).self || global); // WebModule idiom. http://git.io/WebModule

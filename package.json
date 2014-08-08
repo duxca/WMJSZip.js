@@ -1,6 +1,6 @@
 {
   "name":           "legokichi.jszip.js",
-  "version":        "0.0.2",
+  "version":        "0.1.1",
   "description":    "JSZip wapper for WebModule.",
   "url":            "https://github.com/legokichi/WebModule.JSZip.js",
   "keywords":       ["legokichi", "WebModule", "Unstable"],
