@@ -1,6 +1,6 @@
 # WebModule.JSZip.js [![Build Status](https://api.travis-ci.org/legokichi/WebModule.JSZip.js.png)](http://travis-ci.org/legokichi/WebModule.JSZip.js)
 
-[![npm](https://nodei.co/npm/legokichi.webmodule.jszip.js.png?downloads=true&stars=true)](https://nodei.co/npm/legokichi.webmodule.jszip.js/)
+[![npm](https://nodei.co/npm/legokichi.jszip.js.png?downloads=true&stars=true)](https://nodei.co/npm/legokichi.webmodule.jszip.js/)
 
 [JSZip](http://stuk.github.io/jszip/) wrapper for WebModule.
 
