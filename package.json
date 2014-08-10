@@ -1,16 +1,16 @@
 {
   "name":           "legokichi.jszip.js",
-  "version":        "0.1.1",
+  "version":        "0.2.0",
   "description":    "JSZip wapper for WebModule.",
-  "url":            "https://github.com/legokichi/WebModule.JSZip.js",
+  "url":            "https://github.com/legokichi/WMJSZip.js",
   "keywords":       ["legokichi", "WebModule", "Unstable"],
   "repository": {
     "type":         "git",
-    "url":          "https://github.com/legokichi/WebModule.JSZip.js.git"
+    "url":          "https://github.com/legokichi/WMJSZip.js.git"
   },
   "scripts": {
     "watch":        "node node_modules/uupaa.watch.js --verbose --action build",
-    "build":        "cat lib/WebModule.JSZip.js.before.txt vender/jszip/dist/jszip.js lib/WebModule.JSZip.js.after.txt > lib/WebModule.JSZip.js; cat lib/WebModule.JSZip.js.before.txt vender/jszip/dist/jszip.min.js lib/WebModule.JSZip.js.after.txt  > release/WebModule.JSZip.min.js",
+    "build":        "cat lib/WMJSZip.js.before.txt vender/jszip/dist/jszip.js lib/WMJSZip.js.after.txt > lib/WMJSZip.js; cat lib/WMJSZip.js.before.txt vender/jszip/dist/jszip.min.js lib/WMJSZip.js.after.txt  > release/WMJSZip.min.js",
     "build-simple": "npm run build",
     "build-release":"npm run build",
     "test":         "npm run test-node; npm run test-browser",
@@ -27,8 +27,8 @@
   },
 
   "x-build": {
-    "source":       ["lib/WebModule.JSZip.js"],
-    "output":       "release/WebModule.JSZip.min.js",
+    "source":       ["lib/WMJSZip.js"],
+    "output":       "release/WMJSZip.min.js",
     "target":       ["all"],
     "label":        ["@dev"],
     "module": {
