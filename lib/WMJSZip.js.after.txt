@@ -1,0 +1,15 @@
+return module.exports;
+})({}, {});
+
+//{@dev
+JSZip["repository"] = "https://github.com/legokichi/WebModule.JSZip.js"; // GitHub repository URL. http://git.io/Help
+//}@dev
+
+// --- exports ---------------------------------------------
+if ("process" in global) {
+    module["exports"] = JSZip;
+}
+
+global["WMJSZip" in global ? "WMJSZip_" : "WMJSZip"] = JSZip;　// switch module.
+
+})((this || 0).self || global); // WebModule idiom. http://git.io/WebModule
