@@ -2,10 +2,10 @@
   "reports": [
     {
       "info": {
-        "file": "lib/WebModule.JSZip.js",
-        "fileShort": "lib/WebModule.JSZip.js",
-        "fileSafe": "lib_WebModule_JSZip_js",
-        "link": "files/lib_WebModule_JSZip_js/index.html"
+        "file": "lib/WMJSZip.js",
+        "fileShort": "lib/WMJSZip.js",
+        "fileSafe": "lib_WMJSZip_js",
+        "link": "files/lib_WMJSZip_js/index.html"
       },
       "jshint": {
         "messages": 95
@@ -15,48 +15,48 @@
           "line": 1,
           "complexity": {
             "sloc": {
-              "physical": 8997,
-              "logical": 3705
+              "physical": 8999,
+              "logical": 3704
             },
-            "cyclomatic": 740,
+            "cyclomatic": 739,
             "halstead": {
               "operators": {
                 "distinct": 64,
-                "total": 10008,
+                "total": 10002,
                 "identifiers": [
                   "__stripped__"
                 ]
               },
               "operands": {
                 "distinct": 1354,
-                "total": 12835,
+                "total": 12830,
                 "identifiers": [
                   "__stripped__"
                 ]
               },
-              "length": 22843,
+              "length": 22832,
               "vocabulary": 1418,
-              "difficulty": 303.3382570162482,
-              "volume": 239158.02803120227,
-              "effort": 72545779.37442791,
-              "bugs": 79.71934267706742,
-              "time": 4030321.076357106
+              "difficulty": 303.22008862629247,
+              "volume": 239042.86197121264,
+              "effort": 72482597.7923937,
+              "bugs": 79.68095399040422,
+              "time": 4026810.988466317
             },
             "params": 481
           }
         },
-        "module": "lib/WebModule.JSZip.js",
-        "maintainability": 56.3358094779206
+        "module": "lib/WMJSZip.js",
+        "maintainability": 56.338960868524204
       }
     }
   ],
   "summary": {
     "total": {
-      "sloc": 8997,
-      "maintainability": 56.3358094779206
+      "sloc": 8999,
+      "maintainability": 56.338960868524204
     },
     "average": {
-      "sloc": 8997,
+      "sloc": 8999,
       "maintainability": "56.34"
     }
   }

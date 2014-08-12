@@ -1,60 +1,37 @@
-var ModuleTestWebModule.Zip = (function(global) {
+var ModuleTestWMJSZip = (function(global) {
 
 var _runOnNode = "process" in global;
 var _runOnWorker = "WorkerLocation" in global;
 var _runOnBrowser = "document" in global;
-
-return new Test("WebModule.Zip", {
+var JSZip = WMJSZip;
+return new Test("WMJSZip", {
         disable:    false,
         browser:    true,
         worker:     true,
-        node:       true,
+        node:       false,
         button:     true,
         both:       true, // test the primary module and secondary module
     }).add([
-        testWebModule.Zip_value,
-        testWebModule.Zip_isNumber,
-        testWebModule.Zip_isInteger,
+        test_WMJSZip,
     ]).run().clone();
 
-function testWebModule.Zip_value(test, pass, miss) {
-
-    var result = new WebModule.Zip(123.4).value();
-
-    if (result === 123.4) {
-        test.done(pass());
-    } else {
-        test.done(miss());
-    }
-}
-
-function testWebModule.Zip_isNumber(test, pass, miss) {
-
-    var result = [
-            new WebModule.Zip(123.4).isNumber(),  // true
-            new WebModule.Zip(123.0).isNumber()   // true
-        ];
-
-    if (!/false/.test(result.join())) {
-        test.done(pass());
-    } else {
-        test.done(miss());
-    }
-}
-
-function testWebModule.Zip_isInteger(test, pass, miss) {
-
-    var result = [
-           !new WebModule.Zip(123.4).isInteger(), // !false -> true
-            new WebModule.Zip(123.0).isInteger()  // true
-        ];
-
-    if (!/false/.test(result.join())) {
-        test.done(pass());
-    } else {
-        test.done(miss());
-    }
+function test_WMJSZip(test, pass, miss) {
+     var zipObj = new JSZip();
+     var expected = "R0lGODdhBQAFAIACAAAAAP/eACwAAAAABQAFAAACCIwPkWerClIBADs="
+     zipObj.file("smile.gif", expected, {base64: true});
+     var base64 = zipObj.generate({DEFLATE: "DEFLATE"});
+     var arraybuffer = zipObj.load(base64, {base64: true}).file("smile.gif").asArrayBuffer();
+     var reader = new FileReader();
+     reader.readAsDataURL(new Blob([arraybuffer], {mimeType:"image/gif"}));
+     reader.onloadend = function(ev){
+        var actuary = reader.result.replace(/data\:\;base64\,(.+)/, "$1");
+        console.log(actuary, expected);
+        if (actuary === expected) {
+            test.done(pass());
+        } else {
+            test.done(miss());
+        }
+     }
 }
 
 })((this || 0).self || global);
-
