@@ -2,14 +2,14 @@ return module.exports;
 })({}, {});
 
 //{@dev
-JSZip["repository"] = "https://github.com/legokichi/WebModule.JSZip.js"; // GitHub repository URL. http://git.io/Help
+WMJSZip["repository"] = "https://github.com/duxca/WebModule.JSZip.js"; // GitHub repository URL. http://git.io/Help
 //}@dev
 
 // --- exports ---------------------------------------------
 if ("process" in global) {
-    module["exports"] = JSZip;
+    module["exports"] = WMJSZip;
 }
 
-global["WMJSZip" in global ? "WMJSZip_" : "WMJSZip"] = JSZip;　// switch module.
+global["WMJSZip" in global ? "WMJSZip_" : "WMJSZip"] = WMJSZip;　// switch module.
 
 })((this || 0).self || global); // WebModule idiom. http://git.io/WebModule
