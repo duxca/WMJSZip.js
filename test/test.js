@@ -3,7 +3,7 @@ var ModuleTestWMJSZip = (function(global) {
 var _runOnNode = "process" in global;
 var _runOnWorker = "WorkerLocation" in global;
 var _runOnBrowser = "document" in global;
-var JSZip = WMJSZip;
+
 return new Test("WMJSZip", {
         disable:    false,
         browser:    true,
@@ -16,7 +16,7 @@ return new Test("WMJSZip", {
     ]).run().clone();
 
 function test_WMJSZip(test, pass, miss) {
-     var zipObj = new JSZip();
+     var zipObj = new WMJSZip();
      var expected = "R0lGODdhBQAFAIACAAAAAP/eACwAAAAABQAFAAACCIwPkWerClIBADs="
      zipObj.file("smile.gif", expected, {base64: true});
      var base64 = zipObj.generate({DEFLATE: "DEFLATE"});
